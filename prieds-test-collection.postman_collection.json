@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "d0d0106e-3c71-4f2d-ace3-ecdb62b13d29",
+		"name": "prieds-test-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7501599"
+	},
+	"item": [
+		{
+			"name": "post new entry",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cust_name\" : \"agung test baru 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/entry/entry",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"entry",
+						"entry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all entry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/entry/entry?status=on-work&from_date=7/22/2022&to_date=7/23/2022",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"entry",
+						"entry"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "on-work"
+						},
+						{
+							"key": "from_date",
+							"value": "7/22/2022"
+						},
+						{
+							"key": "to_date",
+							"value": "7/23/2022"
+						},
+						{
+							"key": "is_today",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get current entry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/entry/current-entry",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"entry",
+						"current-entry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "set on work",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/entry/entry-work/:entryid",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"entry",
+						"entry-work",
+						":entryid"
+					],
+					"variable": [
+						{
+							"key": "entryid",
+							"value": "62d9ca226bcb3945ec2e8bcd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "set on done",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/entry/entry-done/:entryid",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"entry",
+						"entry-done",
+						":entryid"
+					],
+					"variable": [
+						{
+							"key": "entryid",
+							"value": "62d96961fb2c683e0ce4aa6f"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
